@@ -1,3 +1,1 @@
-function execute(document) {
-  console.log(document);
-}
+console.log(document);

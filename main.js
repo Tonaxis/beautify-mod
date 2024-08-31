@@ -1,3 +1,5 @@
-console.log("Hello world!");
+const divs = document.querySelectorAll("div");
 
-document.querySelector("div").style.backgroundColor = "red";
+divs.forEach((div) => {
+  div.style.backgroundColor = "red";
+});

@@ -9,7 +9,7 @@ const extractor = {
     },
 };
 const result = (0, beautify_dev_1.extract)([extractor]);
-console.log("result", result);
+console.log("result AAA", result);
 // const result2 = await extract([extractor]);
 // console.log("PROMISE result", result2);
 // (async () => {

@@ -19,7 +19,9 @@ const beautify_dev_1 = require("beautify-dev");
         },
     };
     const result = (0, beautify_dev_1.extract)([extractor]);
-    console.log(result);
+    console.log("result", result);
+    const result2 = yield (0, beautify_dev_1.extract)([extractor]);
+    console.log("PROMISE result", result2);
 }))();
 
 },{"beautify-dev":3}],2:[function(require,module,exports){

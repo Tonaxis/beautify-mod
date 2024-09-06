@@ -3,17 +3,16 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const beautify_dev_1 = require("beautify-dev");
 const extractor = {
-    name: "images",
+    name: "divs",
     extract: (document) => {
-        return document.querySelectorAll("img");
+        return document.querySelectorAll("div");
     },
 };
 const result = (0, beautify_dev_1.extract)([extractor]);
-console.log("result AAA", result);
-// const result2 = await extract([extractor]);
-// console.log("PROMISE result", result2);
-// (async () => {
-// })();
+result.divs.forEach((div) => {
+    div.style.background =
+        "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%)";
+});
 
 },{"beautify-dev":3}],2:[function(require,module,exports){
 "use strict";

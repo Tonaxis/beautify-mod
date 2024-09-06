@@ -19,7 +19,7 @@ console.log("result", result);
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = extract;
-async function extract(extractors) {
+function extract(extractors) {
     const extracted = {};
     for (const extractor of extractors) {
         if (extractor.name && extractor.extract) {

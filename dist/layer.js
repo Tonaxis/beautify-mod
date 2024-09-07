@@ -48,7 +48,10 @@ function extract(extractors) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = render;
 function render() {
-    document.body.outerHTML = globalThis.beautify.document.outerHTML;
+    // document.body.outerHTML = (
+    //   (globalThis as any).beautify as BeautifyData
+    // ).document.outerHTML;
+    document.textContent = globalThis.beautify.document.outerHTML;
     document.querySelectorAll("*:not([beautified])").forEach((element) => {
         element.setAttribute("beautified", "true");
     });

@@ -5,6 +5,7 @@ const extractors = [
     {
         name: "divs",
         extract: (document) => {
+            console.log(document);
             return document.querySelectorAll("div");
         },
     },

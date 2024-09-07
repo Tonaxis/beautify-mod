@@ -49,7 +49,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = render;
 function render() {
     document.body.outerHTML = globalThis.beautify.document.outerHTML;
-    document.querySelectorAll("[beautified=false]").forEach((element) => {
+    document.querySelectorAll("*:not([beautified])").forEach((element) => {
         element.setAttribute("beautified", "true");
     });
 }

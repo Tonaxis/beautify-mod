@@ -1,7 +1,7 @@
 import { extract, render } from "beautify-dev";
 import extractors from "./extractors";
 
-console.log("ENTERED");
+console.log("ENTERED 2");
 
 const results = extract(extractors);
 

@@ -6,7 +6,6 @@ const extractors = [
     {
         name: "divs",
         extract: (document) => {
-            console.log("divs", document);
             return document.querySelectorAll("div");
         },
     },
@@ -21,7 +20,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const beautify_dev_1 = require("beautify-dev");
 const extractors_1 = __importDefault(require("./extractors"));
-console.log("ENTERED");
+console.log("ENTERED 2");
 const results = (0, beautify_dev_1.extract)(extractors_1.default);
 console.log("results", results);
 results.divs.forEach((element) => {
@@ -49,7 +48,9 @@ function extract(extractors) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = render;
 function render() {
-    return (document = globalThis.beautify.document);
+    document.open();
+    document.write(globalThis.beautify.document.outerHTML);
+    document.close();
 }
 
 },{}],5:[function(require,module,exports){
@@ -64,7 +65,7 @@ Object.defineProperty(exports, "extract", { enumerable: true, get: function () {
 var rendering_1 = require("./functions/rendering");
 Object.defineProperty(exports, "render", { enumerable: true, get: function () { return __importDefault(rendering_1).default; } });
 globalThis.beautify = {
-    document: Object.assign({}, document),
+    document: document.documentElement.cloneNode(true),
 };
 
 },{"./functions/extracting":3,"./functions/rendering":4}]},{},[2]);

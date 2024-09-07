@@ -5,7 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const beautify_dev_1 = require("beautify-dev");
 const extractors_1 = __importDefault(require("./extractors"));
-console.log("ENTERED");
+console.log("ENTERED 2");
 const results = (0, beautify_dev_1.extract)(extractors_1.default);
 console.log("results", results);
 results.divs.forEach((element) => {

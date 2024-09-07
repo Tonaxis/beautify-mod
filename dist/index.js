@@ -9,3 +9,4 @@ const results = (0, beautify_dev_1.extract)(extractors_1.default);
 results.divs.forEach((element) => {
     element.style.boxShadow = "1px 2px 3px 4px red";
 });
+(0, beautify_dev_1.render)();

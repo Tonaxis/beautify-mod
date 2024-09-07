@@ -9,10 +9,10 @@
   "author": "Tonaxis",
   "license": "ISC",
   "dependencies": {
-    "beautify-dev": "^0.0.1"
+    "beautify-dev": "^0.0.3"
   },
   "devDependencies": {
-    "typescript": "^5.5.4",
-    "browserify": "^17.0.0"
+    "browserify": "^17.0.0",
+    "typescript": "^5.5.4"
   }
 }

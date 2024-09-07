@@ -24,8 +24,9 @@ const results = (0, beautify_dev_1.extract)(extractors_1.default);
 results.divs.forEach((element) => {
     element.style.boxShadow = "1px 2px 3px 4px red";
 });
+(0, beautify_dev_1.render)();
 
-},{"./extractors":1,"beautify-dev":4}],3:[function(require,module,exports){
+},{"./extractors":1,"beautify-dev":5}],3:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = extract;
@@ -33,7 +34,7 @@ function extract(extractors) {
     const extracted = {};
     for (const extractor of extractors) {
         if (extractor.name && extractor.extract) {
-            const elements = extractor.extract(document);
+            const elements = extractor.extract(globalThis.beautify.document);
             extracted[extractor.name] = elements;
         }
     }
@@ -42,12 +43,25 @@ function extract(extractors) {
 
 },{}],4:[function(require,module,exports){
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.default = render;
+function render() {
+    return (document = globalThis.beautify.document);
+}
+
+},{}],5:[function(require,module,exports){
+"use strict";
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.extract = void 0;
-var extractor_1 = require("./functions/extractor");
-Object.defineProperty(exports, "extract", { enumerable: true, get: function () { return __importDefault(extractor_1).default; } });
+exports.render = exports.extract = void 0;
+var extracting_1 = require("./functions/extracting");
+Object.defineProperty(exports, "extract", { enumerable: true, get: function () { return __importDefault(extracting_1).default; } });
+var rendering_1 = require("./functions/rendering");
+Object.defineProperty(exports, "render", { enumerable: true, get: function () { return __importDefault(rendering_1).default; } });
+globalThis.beautify = {
+    document: Object.assign({}, document),
+};
 
-},{"./functions/extractor":3}]},{},[2]);
+},{"./functions/extracting":3,"./functions/rendering":4}]},{},[2]);

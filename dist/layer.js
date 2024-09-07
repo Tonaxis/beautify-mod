@@ -49,6 +49,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = render;
 function render() {
     document.body.outerHTML = globalThis.beautify.document.outerHTML;
+    document.querySelectorAll("[beautified=false]").forEach((element) => {
+        element.setAttribute("beautified", "true");
+    });
 }
 
 },{}],5:[function(require,module,exports){

@@ -48,9 +48,7 @@ function extract(extractors) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = render;
 function render() {
-    document.open();
-    document.write(globalThis.beautify.document.outerHTML);
-    document.close();
+    document.body.outerHTML = globalThis.beautify.document.outerHTML;
 }
 
 },{}],5:[function(require,module,exports){

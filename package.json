@@ -9,7 +9,7 @@
   "author": "Tonaxis",
   "license": "ISC",
   "dependencies": {
-    "beautify-dev": "^0.0.9"
+    "beautify-dev": "^0.0.10"
   },
   "devDependencies": {
     "browserify": "^17.0.0",

@@ -51,13 +51,15 @@ function extract(extractors) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = render;
 function render() {
-    // document.body.outerHTML = (
-    //   (globalThis as any).beautify as BeautifyData
-    // ).document.outerHTML;
-    document.textContent = globalThis.beautify.document.outerHTML;
-    document.querySelectorAll("*:not([beautified])").forEach((element) => {
+    console.log(document.textContent);
+    const beautifiedDocument = globalThis.beautify
+        .document;
+    beautifiedDocument
+        .querySelectorAll("*:not([beautified])")
+        .forEach((element) => {
         element.setAttribute("beautified", "true");
     });
+    document.textContent = beautifiedDocument.outerHTML;
 }
 
 },{}],5:[function(require,module,exports){

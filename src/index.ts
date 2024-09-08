@@ -4,6 +4,7 @@ import extractors from "./extractors";
 const results = extract(extractors);
 
 console.log(results);
+console.log(results.divs);
 
 results.divs?.forEach((element) => {
   console.log(element);

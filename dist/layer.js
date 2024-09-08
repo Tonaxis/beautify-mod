@@ -51,7 +51,6 @@ function extract(extractors) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = render;
 function render() {
-    console.log(document.textContent);
     const beautifiedDocument = globalThis.beautify
         .document;
     beautifiedDocument
@@ -59,7 +58,7 @@ function render() {
         .forEach((element) => {
         element.setAttribute("beautified", "true");
     });
-    document.documentElement.outerHTML = beautifiedDocument.outerHTML;
+    document.documentElement.innerHTML = beautifiedDocument.innerHTML;
 }
 
 },{}],5:[function(require,module,exports){

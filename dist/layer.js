@@ -59,7 +59,7 @@ function render() {
         .forEach((element) => {
         element.setAttribute("beautified", "true");
     });
-    document.textContent = beautifiedDocument.outerHTML;
+    document.documentElement.outerHTML = beautifiedDocument.outerHTML;
 }
 
 },{}],5:[function(require,module,exports){

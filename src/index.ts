@@ -3,13 +3,8 @@ import extractors from "./extractors";
 
 const results = extract(extractors);
 
-console.log(results);
-console.log(results.divs);
-
 results.divs?.forEach((element) => {
-  console.log(element);
   element.style.boxShadow = "1px 2px 3px 4px red";
-  console.log(element);
 });
 
 render();
